@@ -3,10 +3,8 @@ This tool can process pathology image into specific stain channel and help you l
 ## FileStructure
 ```
 .
+├── HE.json
 ├── HE.png
-├── IHC.png
-├── LabelNameDialog.ui
-├── MainView.ui
 ├── README.md
 ├── biolabel
 │   ├── __main__.py
@@ -36,17 +34,30 @@ This tool can process pathology image into specific stain channel and help you l
 │       ├── Ui_MainWindow.py
 │       ├── Ui_label.py
 │       └── canvas.py
-├── hook.png
+├── img
+│   ├── ChangeColor.gif
+│   ├── DeleteCreate.gif
+│   ├── Export.gif
+│   ├── OpenCreate.gif
+│   ├── createLabel.png
+│   └── imageProcess.png
+├── myExcel.csv
 ├── requirements.txt
 └── test
     ├── __main__.py
+    ├── for_FStest.json
+    ├── test_file.py
+    ├── test_fileService.py
     ├── test_image.py
     ├── test_imageProcessService.py
+    ├── test_imagefile.py
     ├── test_label.py
+    ├── test_labelService.py
+    ├── test_labelfile.py
     ├── test_labellist.py
     └── test_point.py
 
-8 directories, 35 files
+9 directories, 45 files
 ```
 
 ## Environment
@@ -73,6 +84,7 @@ In Create Label Mode, you can create some shape of labels by left click for star
 - Line
 - LineStrip
 - Point
+
 ![Image](img/createLabel.png)
 ![Image](img/OpenCreate.gif)
 
@@ -82,13 +94,17 @@ In Create Label Mode, you can create some shape of labels by left click for star
 - turn to Hematoxylin channel
 - turn to Eosin channel
 - turn to Dab channel
+
 ![Image](img/imageProcess.png)
+
 ### edit labels
 - change color of labels
 - change name of labels
 - change position of labels
 - delete specific label
+
 ![Image](img/ChangeColor.gif)
+
 ![Image](img/DeleteCreate.gif)
 ### save your labels
 File -> save or save as..
